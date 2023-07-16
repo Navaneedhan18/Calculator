@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <center><h1>Calculator</h1></center>
+</head>
+<style>
+   .fno_box
+   {
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+   }
+   .sec_box
+   {  
+    height: 35px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+   }
+   .result
+   {
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(219, 202, 101);
+   }
+   .add{
+    background-color: blueviolet;
+    border-radius: 500px;
+    transform: scaleX(1.5);
+    transform: scaleY(1.5);
+   }
+   .body{
+    height: 400px;
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 400px;
+    padding-top: 100px;
+    border: 8px solid black;
+    display: flex table-row;
+    justify-content: center;
+    background-color: rgb(57, 185, 175);
+   }
+</style>
+ <script>
+    function add()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=num1+num2;
+       document.getElementById('r').value=result;
+    }
+    function sub()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=Math.abs(num1-num2);
+       document.getElementById('r').value=result;
+    }
+    function div()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=num1/num2;
+       document.getElementById('r').value=result;
+    }
+    function mul()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=num1*num2;
+       document.getElementById('r').value=result;
+    }
+ </script>
+ 
+<center>  
+ <body class="body">
+    <input class="fno_box" type="number" id="i1" placeholder="Enter 1st number">
+    <input class="sec_box" type="number" id="i2" placeholder="Enter 2nd number">
+    <br>
+    <br>
+    <button class="add" onclick="add()">+</button>
+    <button class="add" onclick="sub()">-</button>
+    <button class="add" onclick="mul()">*</button>
+    <button class="add" onclick="div()">/</button>
+    <br><br>
+    <input class="result"lj  type="text" id="r" placeholder="Result">
+</body>
+</center>
+</html>
